@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    /* Modern, Clean SaaS Aesthetic */
+    body { 
+      font-family: 'Segoe UI', system-ui, sans-serif; 
+      width: 280px; 
+      margin: 0; 
+      padding: 20px; 
+      background: #ffffff; 
+      color: #1e293b; 
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .header h2 { 
+      margin: 0; 
+      font-size: 18px; 
+      font-weight: 700; 
+      color: #0f172a; 
+      letter-spacing: -0.5px;
+    }
+    
+    /* The Cross/Close Button */
+    .close-btn {
+      background: none;
+      border: none;
+      font-size: 24px;
+      line-height: 1;
+      color: #94a3b8;
+      cursor: pointer;
+      padding: 0;
+      transition: color 0.2s ease;
+    }
+    
+    .close-btn:hover { 
+      color: #ef4444; 
+    }
+
+    .label-group { 
+      margin-bottom: 18px; 
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #475569;
+      margin-bottom: 8px;
+    }
+
+    /* Clean Dropdown */
+    select { 
+      width: 100%; 
+      padding: 10px 12px; 
+      border-radius: 8px; 
+      border: 1px solid #cbd5e1; 
+      background: #f8fafc; 
+      color: #0f172a; 
+      font-size: 14px; 
+      font-family: inherit;
+      outline: none; 
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+    }
+    
+    select:focus, select:hover { 
+      border-color: #6366f1; 
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    }
+
+    /* Premium Slider */
+    input[type="range"] { 
+      width: 100%; 
+      accent-color: #6366f1; 
+      cursor: pointer;
+    }
+    
+    #immersionVal {
+      color: #6366f1;
+      font-weight: 700;
+    }
+
+    /* Primary Action Button */
+    button#applyBtn { 
+      width: 100%; 
+      padding: 12px; 
+      border-radius: 8px; 
+      border: none; 
+      background: #6366f1; 
+      color: white; 
+      font-weight: 600; 
+      font-size: 14px; 
+      cursor: pointer; 
+      transition: background 0.2s ease, transform 0.1s ease; 
+      margin-top: 5px;
+      box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.2);
+    }
+    
+    button#applyBtn:hover { 
+      background: #4f46e5; 
+    }
+    
+    button#applyBtn:active {
+      transform: scale(0.98);
+    }
+
+    #status { 
+      margin-top: 10px; 
+      font-size: 12px; 
+      text-align: center; 
+      height: 15px; 
+      font-weight: 600; 
+    }
+
+    /* Footer / Onboarding Link */
+    .footer {
+      margin-top: 15px;
+      text-align: center;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 15px;
+    }
+
+    .footer a {
+      color: #64748b;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .footer a:hover {
+      color: #6366f1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h2>Reality Filter</h2>
+    <button id="closeBtn" class="close-btn" title="Close">&times;</button>
+  </div>
+  
+  <div class="label-group">
+    <label for="theme">Aesthetic Theme</label>
+    <select id="theme">
+      <option value="none">Normal Reality (Off)</option>
+      <option value="cyberpunk">Cyberpunk 2077</option>
+      <option value="elvish">Mystic Elvish</option>
+      <option value="zen">Minimal Zen</option>
+      <option value="glassmorphism">Dark Glassmorphism</option>
+      <option value="dark_academia">Dark Academia</option>
+      <option value="vaporwave">Vaporwave 1995</option>
+      <option value="terminal">Retro Terminal</option>
+      <option value="solarized">Solarized Reading</option>
+    </select>
+  </div>
+
+  <div class="label-group">
+    <label for="immersion">Immersion Level: <span id="immersionVal">3</span></label>
+    <input type="range" id="immersion" min="1" max="5" value="3">
+  </div>
+
+  <button id="applyBtn">Apply Filter</button>
+  <div id="status"></div>
+
+  <div class="footer">
+    <a href="#" id="onboardingLink">Getting Started Guide &rarr;</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
