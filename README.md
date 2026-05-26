@@ -38,7 +38,7 @@ Here is how the Aesthetic Reality Filter transforms the web:
 ### Wikipedia Redefined
 ![Wikipedia Theme](images/Screenshot%20wikipedia.png)
 
-### YouTube & Live Chat Integration
+### YouTube
 ![YouTube Theme](images/Screenshot%20Youtube.png)
 ![YouTube Extended](images/Screenshot%20yt-2.png)
 
